@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CatClients</string>
+    <string name="name">Name:</string>
+    <string name="remove">Remove</string>
+    <string name="delete">Delete a cat</string>
+    <string name="add">Add a new cat</string>
+    <string name="type_breed">Type a breed:</string>
+    <string name="type_name">Type a name:</string>
+    <string name="back">Back</string>
+    <string name="start">Start</string>
+    <string name="breed">Breed:</string>
+    <string name="condition">Condition:</string>
+</resources>

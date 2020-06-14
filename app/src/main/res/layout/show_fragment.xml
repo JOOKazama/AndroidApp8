@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="18dp"
+                android:id="@+id/label_name"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:text="@string/name"
+                android:fontFamily="casual"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:id="@+id/show_name"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_name"/>
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="18dp"
+                android:id="@+id/label_breed"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:text="@string/breed"
+                android:fontFamily="casual"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_name"/>
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:id="@+id/show_breed"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_breed"/>
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="18dp"
+                android:id="@+id/label_condition"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:text="@string/condition"
+                android:fontFamily="casual"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_breed"/>
+
+        <TextView
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:id="@+id/show_condition"
+                tools:ignore="MissingConstraints,RtlSymmetry"
+                android:paddingLeft="5sp"
+                android:paddingStart="5sp"
+                android:fontFamily="sans-serif-condensed-medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_condition"/>
+
+        <Button
+                android:text="@string/back"
+                android:layout_width="125dp"
+                android:layout_height="39dp"
+                android:id="@+id/back"
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/round_style"
+                android:fontFamily="casual"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_condition"/>
+
+        <Button
+                android:layout_width="125dp"
+                android:layout_height="39dp"
+                android:id="@+id/start"
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/round_style"
+                android:fontFamily="casual"
+                app:layout_constraintStart_toEndOf="@+id/back"
+                app:layout_constraintTop_toBottomOf="@+id/show_condition"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
