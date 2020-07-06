@@ -13,7 +13,6 @@ import com.catclients.vh_adapter.CatAdapter;
 import com.catclients.R;
 import com.catclients.classes.Cat;
 import com.catclients.classes.ListCats;
-
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements AddCat
