@@ -18,8 +18,8 @@ import com.catclients.interfaces.AddCat;
 public class FragmentAdd extends DialogFragment implements View.OnClickListener
 {
     EditText add_name, add_breed;
-    AddCat addcat;
-    Button add1;
+    AddCat add_cat;
+    Button button_add;
 
     @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     { return inflater.inflate(R.layout.add_fragment, container, false); }
@@ -29,19 +29,19 @@ public class FragmentAdd extends DialogFragment implements View.OnClickListener
     {
         add_name=view.findViewById(R.id.add_name);
         add_breed=view.findViewById(R.id.add_breed);
-        add1=view.findViewById(R.id.add1);
-        add1.setOnClickListener(this);
+        button_add=view.findViewById(R.id.button_add);
+        button_add.setOnClickListener(this);
     }
 
     @Override public void onAttach(@NonNull Context context)
     {
         super.onAttach(context);
-        addcat=(AddCat)context;
+        add_cat=(AddCat)context;
     }
 
     @Override public void onClick(View v)
     {
-        addcat.Add(new Cat(add_name.getText().toString(), add_breed.getText().toString(), "Inactive"));
+        add_cat.Add(new Cat(add_name.getText().toString(), add_breed.getText().toString(), "Inactive"));
         dismiss();
     }
 }

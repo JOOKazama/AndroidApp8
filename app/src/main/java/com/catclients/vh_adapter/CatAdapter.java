@@ -54,7 +54,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatViewHolder> implements S
         if(cat.getCondition().equals("Active")) holder.setCardViewColorAndVisibility();
         else holder.setCardViewColorAndVisibilitySecond();
 
-        holder.cardview.setOnClickListener(new View.OnClickListener()
+        holder.card_view.setOnClickListener(new View.OnClickListener()
         {
             @Override public void onClick(View v)
             {
@@ -63,20 +63,20 @@ public class CatAdapter extends RecyclerView.Adapter<CatViewHolder> implements S
 
                 if(!holder.getColor())
                 {
-                    FragmentShow fs=new FragmentShow(CatAdapter.this);
-                    fs.setArguments(bundle);
-                    fs.show(((MainActivity)context).getSupportFragmentManager(), "Hello there!");
+                    FragmentShow fragment_show=new FragmentShow(CatAdapter.this);
+                    fragment_show.setArguments(bundle);
+                    fragment_show.show(((MainActivity)context).getSupportFragmentManager(), "Hello there!");
                 }
                 else
                 {
-                    FragmentShowSecond fss=new FragmentShowSecond(CatAdapter.this);
-                    fss.setArguments(bundle);
-                    fss.show(((MainActivity)context).getSupportFragmentManager(), "Hello there!");
+                    FragmentShowSecond fragment_show_second=new FragmentShowSecond(CatAdapter.this);
+                    fragment_show_second.setArguments(bundle);
+                    fragment_show_second.show(((MainActivity)context).getSupportFragmentManager(), "Hello there!");
                 }
             }
         });
 
-        holder.remove.setOnClickListener(new Button.OnClickListener()
+        holder.button_remove.setOnClickListener(new Button.OnClickListener()
         {
             @Override public void onClick(View v)
             {

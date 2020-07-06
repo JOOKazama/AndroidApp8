@@ -18,11 +18,11 @@ import com.catclients.interfaces.SendCat;
 public class FragmentShow extends DialogFragment
 {
     TextView show_name, show_breed, show_condition;
-    Button start, back;
-    SendCat sendcat;
+    Button button_start, button_back;
+    SendCat send_cat;
     Cat cat;
 
-    public FragmentShow(SendCat sendcat) { this.sendcat=sendcat; }
+    public FragmentShow(SendCat sendcat) { this.send_cat=sendcat; }
 
     @Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     { return inflater.inflate(R.layout.show_fragment, container, false); }
@@ -34,10 +34,10 @@ public class FragmentShow extends DialogFragment
         show_name=view.findViewById(R.id.show_name);
         show_breed=view.findViewById(R.id.show_breed);
         show_condition=view.findViewById(R.id.show_condition);
-        start=view.findViewById(R.id.start);
-        back=view.findViewById(R.id.back);
+        button_start=view.findViewById(R.id.button_start);
+        button_back=view.findViewById(R.id.button_back);
 
-        start.setText("Start!");
+        button_start.setText("Start!");
         assert getArguments()!=null;
         cat=getArguments().getParcelable("cat");
 
@@ -46,16 +46,16 @@ public class FragmentShow extends DialogFragment
         show_breed.setText(cat.getBreed());
         show_condition.setText(cat.getCondition());
 
-        start.setOnClickListener(new View.OnClickListener()
+        button_start.setOnClickListener(new View.OnClickListener()
         {
             @Override public void onClick(View v)
             {
-                sendcat.Send(cat);
+                send_cat.Send(cat);
                 dismiss();
             }
         });
 
-        back.setOnClickListener(new View.OnClickListener() { @Override public void onClick(View v) { dismiss(); } });
+        button_back.setOnClickListener(new View.OnClickListener() { @Override public void onClick(View v) { dismiss(); } });
     }
 
     @Override public void onAttach(@NonNull Context context) { super.onAttach(context); }

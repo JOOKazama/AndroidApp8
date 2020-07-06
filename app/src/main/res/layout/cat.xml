@@ -8,7 +8,7 @@
         android:layout_marginTop="20sp">
 
     <androidx.cardview.widget.CardView
-            android:id="@+id/cardview"
+            android:id="@+id/card_view"
             android:layout_width="408dp"
             android:layout_height="73dp"
             android:layout_margin="5dp"
@@ -18,10 +18,11 @@
             tools:layout_editor_absoluteX="1dp">
 
         <RelativeLayout
-                android:id="@+id/linearLayout"
+                android:id="@+id/linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="34dp"
@@ -32,14 +33,17 @@
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     tools:ignore="RtlSymmetry"/>
+
             <Button
                     android:text="@string/remove"
                     android:layout_marginTop="35sp"
                     android:fontFamily="casual"
                     android:background="@drawable/normal_style"
                     android:layout_width="match_parent"
-                    android:layout_height="38dp" android:id="@+id/remove"/>
+                    android:layout_height="38dp" android:id="@+id/button_remove"/>
+
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

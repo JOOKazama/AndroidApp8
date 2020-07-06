@@ -1,7 +1,6 @@
 package com.catclients.main;
 import android.os.Build;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,10 +18,10 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements AddCat
 {
-    ListCats list=new ListCats();
-    CatAdapter adapter;
-    RecyclerView view;
-    Button add;
+    ListCats list_cats=new ListCats();
+    CatAdapter cat_adapter;
+    RecyclerView recycler_view;
+    Button button_add;
 
     @RequiresApi(api=Build.VERSION_CODES.KITKAT)
     @Override protected void onCreate(Bundle savedInstanceState)
@@ -30,24 +29,24 @@ public class MainActivity extends AppCompatActivity implements AddCat
         super.onCreate(savedInstanceState);
         Objects.requireNonNull(this.getSupportActionBar()).hide();
         setContentView(R.layout.activity_main);
-        view=findViewById(R.id.view);
-        add=findViewById(R.id.add);
+        recycler_view=findViewById(R.id.recycler_view);
+        button_add=findViewById(R.id.button_add);
 
-        list.addClient(new Cat("asd", "asd", "asd"));
+        list_cats.addClient(new Cat("Albert Whiskers", "Bombay", "Inactive"));
 
-        adapter=new CatAdapter(list.getCats(), this);
-        view.setLayoutManager(new LinearLayoutManager(this));
-        view.setAdapter(adapter);
+        cat_adapter=new CatAdapter(list_cats.getCats(), this);
+        recycler_view.setLayoutManager(new LinearLayoutManager(this));
+        recycler_view.setAdapter(cat_adapter);
 
-        add.setOnClickListener(new View.OnClickListener()
+        button_add.setOnClickListener(new View.OnClickListener()
         {
             @Override public void onClick(View v)
             {
-                FragmentAdd fa=new FragmentAdd();
-                fa.show(getSupportFragmentManager(), "Hello there!");
+                FragmentAdd fragment_add=new FragmentAdd();
+                fragment_add.show(getSupportFragmentManager(), "Hello there!");
             }
         });
     }
 
-    @Override public void Add(Cat cat) { adapter.AddCat(cat); }
+    @Override public void Add(Cat cat) { cat_adapter.AddCat(cat); }
 }

@@ -20,7 +20,9 @@
             tools:ignore="MissingConstraints"
             android:autofillHints=""
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="2dp" android:layout_marginStart="2dp" android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
             app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
@@ -36,18 +38,21 @@
             tools:ignore="MissingConstraints"
             android:autofillHints=""
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="2dp" android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
             app:layout_constraintTop_toBottomOf="@+id/add_name"/>
+
     <Button
             android:text="@string/add"
             android:layout_width="225dp"
             android:layout_height="39dp"
-            android:id="@+id/add1"
+            android:id="@+id/button_add"
             tools:ignore="MissingConstraints"
             android:background="@drawable/round_style"
             android:fontFamily="casual"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="2dp" android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
             app:layout_constraintTop_toBottomOf="@+id/add_breed"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

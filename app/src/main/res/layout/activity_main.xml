@@ -10,18 +10,20 @@
 
 
     <ImageView
-            android:id="@+id/imgPlaylistItemBg"
+            android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:maxHeight="0dp"
             android:src="@drawable/village"
-            android:contentDescription="@string/app_name"/>
+            android:contentDescription="@string/app_name" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="426dp"
             android:layout_height="661dp"
-            android:id="@+id/view"
+            android:id="@+id/recycler_view"
             tools:ignore="MissingConstraints"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="1dp"
@@ -37,7 +39,7 @@
             android:background="@drawable/round_style"
             android:layout_width="203dp"
             android:layout_height="39dp"
-            android:id="@+id/add"
+            android:id="@+id/button_add"
             android:fontFamily="casual"
             tools:ignore="MissingConstraints"
             app:layout_constraintStart_toStartOf="parent"
